@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BookExchangerDataSet" targetNamespace="http://tempuri.org/BookExchangerDataSet.xsd" xmlns:mstns="http://tempuri.org/BookExchangerDataSet.xsd" xmlns="http://tempuri.org/BookExchangerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="BookExchangerConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BookExchangerConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.BookExchanger.Properties.Settings.GlobalReference.Default.BookExchangerConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="SellPostingTableAdapter" GeneratorDataComponentClassName="SellPostingTableAdapter" Name="SellPosting" UserDataComponentName="SellPostingTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="BookExchangerConnectionString (Settings)" DbObjectName="BookExchanger.dbo.SellPosting" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT BookId, offeredPoint, BuyerId, SellerId FROM dbo.SellPosting</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="BookId" DataSetColumn="BookId" />
+              <Mapping SourceColumn="offeredPoint" DataSetColumn="offeredPoint" />
+              <Mapping SourceColumn="BuyerId" DataSetColumn="BuyerId" />
+              <Mapping SourceColumn="SellerId" DataSetColumn="SellerId" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BookExchangerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="BookExchangerDataSet" msprop:Generator_UserDSName="BookExchangerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SellPosting" msprop:Generator_TableClassName="SellPostingDataTable" msprop:Generator_TableVarName="tableSellPosting" msprop:Generator_TablePropName="SellPosting" msprop:Generator_RowDeletingName="SellPostingRowDeleting" msprop:Generator_RowChangingName="SellPostingRowChanging" msprop:Generator_RowEvHandlerName="SellPostingRowChangeEventHandler" msprop:Generator_RowDeletedName="SellPostingRowDeleted" msprop:Generator_UserTableName="SellPosting" msprop:Generator_RowChangedName="SellPostingRowChanged" msprop:Generator_RowEvArgName="SellPostingRowChangeEvent" msprop:Generator_RowClassName="SellPostingRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="BookId" msprop:Generator_ColumnVarNameInTable="columnBookId" msprop:Generator_ColumnPropNameInRow="BookId" msprop:Generator_ColumnPropNameInTable="BookIdColumn" msprop:Generator_UserColumnName="BookId" type="xs:int" />
+              <xs:element name="offeredPoint" msprop:Generator_ColumnVarNameInTable="columnofferedPoint" msprop:Generator_ColumnPropNameInRow="offeredPoint" msprop:Generator_ColumnPropNameInTable="offeredPointColumn" msprop:Generator_UserColumnName="offeredPoint" type="xs:int" />
+              <xs:element name="BuyerId" msprop:Generator_ColumnVarNameInTable="columnBuyerId" msprop:Generator_ColumnPropNameInRow="BuyerId" msprop:Generator_ColumnPropNameInTable="BuyerIdColumn" msprop:Generator_UserColumnName="BuyerId" type="xs:int" />
+              <xs:element name="SellerId" msprop:Generator_ColumnVarNameInTable="columnSellerId" msprop:Generator_ColumnPropNameInRow="SellerId" msprop:Generator_ColumnPropNameInTable="SellerIdColumn" msprop:Generator_UserColumnName="SellerId" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
